@@ -1,0 +1,11 @@
+#!/usr/bin/env -S ninja -f 
+
+cpp = clang++
+
+rule cpp
+  command = $cpp --std=gnu++2b -O3 -MT $out -MF $out.d -o $out $in
+  description = Host-compile $out
+  depfile = $out.d
+  deps = gcc
+
+build NinjaPatchScanner: cpp NinjaPatchScanner.cpp
