@@ -11,6 +11,8 @@ set(CPACK_PACKAGE_VENDOR "KOLANICH")
 
 set(CPACK_PACKAGE_VERSION "${PROJECT_VERSION}")
 
+message(STATUS "We have moved from M$ GitHub to ${PROJECT_HOMEPAGE_URL}, read why on https://codeberg.org/KOLANICH/Fuck-GuanTEEnomo . ")
+
 find_package(ParsePatch)
 add_executable("${PROJECT_NAME}" "./NinjaPatchScanner.cpp")
 target_link_libraries("${PROJECT_NAME}" PRIVATE ParsePatch::libParsePatch)
